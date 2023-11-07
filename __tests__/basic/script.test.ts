@@ -19,6 +19,6 @@ describe("条件分岐・データ型の問題", () => {
   test("func2", () => expect(func2(30)).toEqual("FizzBuzz"));
   test("func2", () => expect(func2(0)).toEqual("error"));
   test("func2", () => expect(func2(-1)).toEqual("error"));
-  test("func2", () => expect(func1(0.5)).toEqual("error"));
+  test("func2", () => expect(func2(0.5)).toEqual("error"));
   test("func2", () => expect(func2("hogehoge")).toEqual("error"));
 });
