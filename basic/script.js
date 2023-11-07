@@ -1,4 +1,4 @@
-// ループ・配列
+// ループ・配列・データ型
 export const func1 = (n) => {
   if (!Number.isInteger(n)) return [];
   if (n <= 0) return [];
