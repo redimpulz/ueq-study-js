@@ -6,10 +6,34 @@ const person = {
 
 export const func1 = () => {
   // このコードを完成させてください
+  const new_person = { ...person };
+  const gender = {
+    gender: "male",
+  };
+  const interests = {
+    interests: [
+      {
+        name: "programming",
+        emoji: "💻",
+      },
+      {
+        name: "motorcycle",
+        emoji: "🏍",
+      },
+    ],
+  };
+  Object.assign(new_person, gender, interests);
+  return new_person;
 };
 
 export const func2 = () => {
   // このコードを完成させてください
+  const person = {
+    firstName: "Ken",
+    lastName: "Takahashi",
+    age: 29,
+  };
+  return JSON.stringify(person);
 };
 
 const jsonStr = `
@@ -40,4 +64,6 @@ const jsonStr = `
 
 export const func3 = () => {
   // このコードを完成させてください
+  const person = JSON.parse(jsonStr);
+  return `${person.name},${person.email},${person.company.name}`;
 };
