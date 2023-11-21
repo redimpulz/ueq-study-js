@@ -1,9 +1,7 @@
 // 非同期処理
 export const func1 = async () => {
   const res = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-  const json = await res.json();
-  console.log(json);
-  return json;
+  return await res.json();
 };
 
 // 直列で非同期処理
