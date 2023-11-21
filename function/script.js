@@ -17,9 +17,11 @@ const students = [
 ];
 
 export const func1 = () => {
-  // このコードを完成させてください
+  return students.filter((x) => x.score >= 50).map((x) => x.name);
 };
 
 export const func2 = () => {
-  // このコードを完成させてください
+  return students
+    .filter((x) => x.gender === "male")
+    .reduce((a, b) => a + b.score, 0);
 };
