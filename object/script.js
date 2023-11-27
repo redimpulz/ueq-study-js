@@ -6,10 +6,18 @@ const person = {
 
 export const func1 = () => {
   // このコードを完成させてください
+  let newperson = { ...person };
+  newperson.gender = "male";
+  newperson.interests = [
+    { name: "programming", emoji: "💻" },
+    { name: "motorcycle", emoji: "🏍" },
+  ];
+  return newperson;
 };
 
 export const func2 = () => {
   // このコードを完成させてください
+  return JSON.stringify(person);
 };
 
 const jsonStr = `
@@ -40,4 +48,6 @@ const jsonStr = `
 
 export const func3 = () => {
   // このコードを完成させてください
+  let userdata = JSON.parse(jsonStr);
+  return userdata.name + "," + userdata.email + "," + userdata.company.name;
 };
